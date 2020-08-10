@@ -157,7 +157,7 @@ string DeclaredFunctions::GenerateLoadLibraryCall_x64(string p_sDLLName)
 		sContent += Utils::CharToHexString(p_sDLLName[Len - 3]);
 		sContent += "\r\n";
 		sContent += "push rax\r\n";
-		sContent += "sub dword [rsp + 7], 0x23\r\n";
+		sContent += "sub dword [rsp + 3], 0x23\r\n";
 	}
 	else if (Len % 8 == 4)
 	{
